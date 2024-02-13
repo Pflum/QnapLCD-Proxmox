@@ -1,0 +1,8 @@
+[Unit]
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/qnap_lcd/lcd-menu.sh
+
+[Install]
+WantedBy=default.target
