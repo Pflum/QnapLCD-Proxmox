@@ -20,21 +20,8 @@ In most cases you would setup *preinit.py*, *lcd-menu.py*, and *shutdown.py* to 
 
 # Installation
 
-To install, clone this repository onto your NAS somewhere that is accessible to the admin (root) user. It needs to be run *as root* to communicate with the display and the TrueNAS CLI.
-
-To communicate with the display, *pyserial* is required. If you are able to install it with `pip`, that's wonderful, do that!
+To install, run the setup script as the root user. It needs to be run *as root* to communicate with the display and the Proxmox CLI.
 
 ```
-pip3 install pyserial
+curl -sSL https://raw.githubusercontent.com/DigitalFunk/QnapLCD-Proxmox/master/setup.sh | sudo bash
 ```
-
-If you are not able to (TrueNAS SCALE), you can use the included `setup.sh` script to install it into the current directory. In the *same directory* as `qnaplcd` (e.g. the root of this project)
-
-```
-./setup.sh
-```
-
-# Using
-
-Add `lcd-menu.py` in TrueNAS SCALE under *System Settings*, *Advanced*, *Init/Shutdown Scripts* as a pre or post init script.
-
