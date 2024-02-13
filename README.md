@@ -1,4 +1,4 @@
-# QnapLCD-Menu
+# QnapLCD-Proxmox
 
 A simplistic package and examples using the front panel display and buttons
 on QNAP NAS devices under other operating systems. Tested with TVS-671,
