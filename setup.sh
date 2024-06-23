@@ -16,7 +16,7 @@ cd $installdir
 if [ $(pwd) == $installdir ]
 then
     rm -rf $installdir/*
-    git clone https://github.com/DigitalFunk/QnapLCD-Proxmox .
+    git clone https://github.com/Pflum/QnapLCD-Proxmox .
     curl -L https://github.com/pyserial/pyserial/tarball/master | tar xzf - --strip-components=1 --wildcards --no-anchored */serial
     cp lcd-menu.service /etc/systemd/system/
     systemctl daemon-reload
