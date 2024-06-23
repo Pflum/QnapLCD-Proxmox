@@ -25,3 +25,14 @@ To install, run the setup script as the root user. It needs to be run *as root* 
 ```
 curl -sSL https://raw.githubusercontent.com/Pflum/QnapLCD-Proxmox/master/setup.sh | bash
 ```
+
+# Upgrade
+
+To Upgrade, remove the program path `/usr/local/bin/qnap_lcd`
+```
+rm -rf /usr/local/bin/qnap_lcd
+```
+Reinstall it with the setup script
+```
+curl -sSL https://raw.githubusercontent.com/Pflum/QnapLCD-Proxmox/master/setup.sh | bash
+```
