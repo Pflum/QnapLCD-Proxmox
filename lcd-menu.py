@@ -37,12 +37,12 @@ def show_version():
     lcd.clear()
     lcd.write(0, [sys_name, sys_vers])
 
-def show_truenas():
-    truenas = shell('cli -c \'system version\'')
-    truenas = truenas.split('-')
+def show_pbs():
+    pbs = shell('proxmox-backup-manager versions --output-format json')
+    pbs = json.loads(pbs)
 
     lcd.clear()
-    lcd.write(0, ['-'.join(truenas[:-1]), truenas[-1]])
+    lcd.write(0, [pbs[0]["Origin"] + " BS", pbs[0]["Version"]])
 
 def show_uptime():
     uptime = shell('uptime').split(',')
@@ -126,7 +126,7 @@ def show_zpool():
 #
 menu_item = 0
 menu = [
-    show_truenas,
+    show_pbs,
     show_version,
     show_uptime
 ]
