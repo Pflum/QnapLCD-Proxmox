@@ -23,5 +23,5 @@ In most cases you would setup *preinit.py*, *lcd-menu.py*, and *shutdown.py* to 
 To install, run the setup script as the root user. It needs to be run *as root* to communicate with the display and the Proxmox CLI.
 
 ```
-curl -sSL https://raw.githubusercontent.com/DigitalFunk/QnapLCD-Proxmox/master/setup.sh | sudo bash
+curl -sSL https://raw.githubusercontent.com/Pflum/QnapLCD-Proxmox/master/setup.sh | bash
 ```
